@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie Clicker: Love Edition</title>
+  <link rel="stylesheet" href="stylesb.css" />
+</head>
+<body>
+  <!-- Menu Screen -->
+  <div id="menu" class="menu-screen">
+    <h1 class="game-title">Cookie Clicker</h1>
+    <div class="menu-box">
+      <button class="menu-btn" id="startBtn">Start</button>
+      <button class="menu-btn" id="upgradesBtn">Upgrades</button>
+      <button class="menu-btn" id="aboutBtn">About</button>
+    </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game" class="hidden">
+    <div class="box">
+      <h1>Cookie Clicker 🍪</h1>
+      <p id="count">0</p>
+      <div class="love-meter-container">
+        <div class="love-meter-bar">
+          <div id="love-fill"></div>
+        </div>
+        <p id="love-status">Love Meter: 0%</p>
+      </div>
+      <img id="cookie" src="cookie.png" alt="cookie">
+      <p id="message">Click the cookie to get love!</p>
+    </div>
+    <button id="themeToggle" title="Toggle Neon Mode">🌙</button>
+    <footer>Made with love by your cookie 💜</footer>
+    <button id="back-button">Back</button>
+  </div>
+<!-- Cookie Shop Modal -->
+<div id="shopModal" class="hidden shop-modal">
+  <h2>Cookie Shop 🍪</h2>
+  <div class="shop-items">
+    <div class="shop-item" data-cost="10" data-img="cookie.png">
+      <p>Classic Cookie 🍪</p>
+      <button>Buy (10 💖)</button>
+    </div>
+    <div class="shop-item" data-cost="50" data-img="hcookie.png">
+      <p>Heart Cookie ❤️</p>
+      <button>Buy (50 💖)</button>
+    </div>
+    <div class="shop-item" data-cost="100" data-img="rcookie.png">
+      <p>Rainbow Cookie🍫</p>
+      <button>Buy (100 💖)</button>
+    </div>
+  </div>
+  <button id="closeShop">Close</button>
+</div>
+
+  <script src="gameb.js"></script>
+</body>
+</html>

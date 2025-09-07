@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e003e; /* darker lavender shade */
+  font-family: Arial, sans-serif;
+}
+
+/* Hidden class for switching screens */
+.hidden {
+  display: none;
+}
+
+/* Title */
+.game-title {
+  font-size: 3rem;
+  color: #ff4fc2;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff4fc2, 0 0 20px #ff4fc2, 0 0 40px #ff4fc2;
+}
+
+/* Menu Box */
+.menu-box {
+  background: rgba(20, 20, 40, 0.9);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 3px solid #a64af9;
+  box-shadow: 0 0 20px #a64af9, 0 0 40px #a64af9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Buttons */
+.menu-btn {
+  background: transparent;
+  border: 2px solid #ff4fc2;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-shadow: 0 0 8px #ff4fc2;
+  box-shadow: 0 0 10px #ff4fc2, inset 0 0 10px #ff4fc2;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 79, 194, 0.1);
+}
+
+.menu-btn:active {
+  animation: pop 0.2s;
+}
+
+/* Pop Animation */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* --- GAME STYLES (from projectx) --- */
+.box {
+  border: 3px solid #a64af9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #a64af9;
+  text-align: center;
+  background-color: #2a2a2a;
+}
+
+#cookie {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: #d6aaff;
+  text-align: center;
+}
+
+.pop {
+  animation: pop 0.2s;
+}
+
+/* Neon toggle button */
+#themeToggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s;
+}
+#themeToggle:hover {
+  transform: scale(1.2);
+}
+
+/* Neon theme styles */
+.neon-mode {
+  background-color: #0f0f1a;
+  color: #39ff14;
+}
+
+body.neon-mode {
+  color: #fff;
+  text-shadow:
+    0 0 5px #ff69b4,
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 30px #ff69b4;
+}
+
+.neon-mode #cookie {
+  filter: drop-shadow(0 0 10px #ff6600);
+}
+#message {
+  background: rgba(255, 0, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+.secret-msg {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background: #ff4fc2;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ff4fc2, 0 0 30px #ff4fc2;
+  z-index: 999;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, 30px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.love-meter-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.love-meter-bar {
+  width: 80%;
+  max-width: 400px;
+  height: 25px;
+  background: #1a1a1a;
+  border: 2px solid #ff69b4;
+  border-radius: 50px;
+  margin: 10px auto;
+  box-shadow: 0 0 15px #ff69b4;
+  overflow: hidden;
+}
+
+#love-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff1493, #ff69b4, #ffc0cb);
+  box-shadow: 0 0 20px #ff69b4;
+  border-radius: 50px;
+  transition: width 0.3s ease-in-out;
+}
+
+#love-status {
+  color: #ffb6c1;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff69b4;
+}
+#back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #ff4da6;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6 inset;
+  transition: transform 0.2s;
+}
+
+#back-button:active {
+  transform: scale(0.9);
+}
+
+#score, #message {
+  color: #fff; /* or #ff4da6 if you want pink */
+}
+#count {
+  color: #fff; /* pure white */
+}
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+.heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  user-select: none;
+}
+.shop-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2a2a2a;
+  border: 3px solid #ff4fc2;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px #ff4fc2;
+  z-index: 9999;
+  text-align: center;
+  color: #fff;
+}
+
+.shop-items {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.shop-item {
+  border: 2px solid #ff69b4;
+  border-radius: 15px;
+  padding: 10px;
+  width: 120px;
+  background: rgba(255,79,194,0.1);
+}
+
+.shop-item button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 2px solid #ff69b4;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
